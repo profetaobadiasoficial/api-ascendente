@@ -7,7 +7,7 @@ import math
 app = FastAPI()
 
 # Carrega efemérides
-ephemeris = load('de431t.bsp')  # Você pode usar o de431_part-2.bsp também
+ephemeris = load('./de431_part-2.bsp')
 earth = ephemeris['earth']
 sun = ephemeris['sun']
 
