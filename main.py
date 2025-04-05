@@ -6,7 +6,7 @@ import requests
 
 app = FastAPI()
 
-BSP_URL = "https://drive.google.com/uc?export=download&id=1CT2GSnQWAi8gFnqq5GN6vYkN-cdJBNGu"
+BSP_URL = "https://github.com/profetaobadiasoficial/api-ascendente/releases/download/Ascendente/de431_part-2.bsp"
 BSP_PATH = "de431_part-2.bsp"
 
 # Baixar o BSP se não existir
