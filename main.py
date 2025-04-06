@@ -11,10 +11,13 @@ BSP_PATH = "de431_part-2.bsp"
 
 # Baixar o BSP se não existir
 if not os.path.exists(BSP_PATH):
-    print("Baixando arquivo BSP do Google Drive...")
-    response = requests.get(BSP_URL)
+    print("Baixando arquivo BSP do GitHub Releases...")
+    response = requests.get(BSP_URL, stream=True)
     with open(BSP_PATH, "wb") as f:
-        f.write(response.content)
+    for chunk in response.iter_content(chunk_size=8192):
+        if chunk:
+            f.write(chunk)
+
     print("Download completo.")
 
 planets = load(BSP_PATH)
